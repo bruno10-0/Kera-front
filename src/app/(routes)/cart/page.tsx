@@ -4,16 +4,23 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Minus, Plus, ShoppingBag, Trash2 } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import { cn } from "@/lib/utils";
 
-// Sample cart data
-const initialCartItems = [
+// Definir los tipos para los elementos del carrito
+interface CartItem {
+  id: number;
+  name: string;
+  size: string;
+  color: string;
+  price: number;
+  quantity: number;
+  image: string;
+}
+
+// Datos iniciales del carrito
+const initialCartItems: CartItem[] = [
   {
     id: 1,
     name: "Camisa Oversize Premium",
@@ -22,7 +29,7 @@ const initialCartItems = [
     price: 49.99,
     quantity: 1,
     image: "https://www.remingtonlatam.com/co/wp-content/uploads/sites/27/2019/09/banner_slider_1600x610-copy.png",
-},
+  },
   {
     id: 2,
     name: "Pantalón Cargo Slim Fit",
@@ -30,8 +37,7 @@ const initialCartItems = [
     color: "Beige",
     price: 69.99,
     quantity: 2,
-    image:
-      "https://www.remingtonlatam.com/co/wp-content/uploads/sites/27/2019/09/banner_slider_1600x610-copy.png",
+    image: "https://www.remingtonlatam.com/co/wp-content/uploads/sites/27/2019/09/banner_slider_1600x610-copy.png",
   },
   {
     id: 3,
@@ -40,40 +46,34 @@ const initialCartItems = [
     color: "Blanco",
     price: 89.99,
     quantity: 1,
-    image:
-      "https://www.remingtonlatam.com/co/wp-content/uploads/sites/27/2019/09/banner_slider_1600x610-copy.png",
+    image: "https://www.remingtonlatam.com/co/wp-content/uploads/sites/27/2019/09/banner_slider_1600x610-copy.png",
   },
 ];
 
 export default function ShoppingCart() {
-  const [cartItems, setCartItems] = useState(initialCartItems);
-  const [promoCode, setPromoCode] = useState("");
-  const [promoApplied, setPromoApplied] = useState(false);
+  const [cartItems, setCartItems] = useState<CartItem[]>(initialCartItems);
 
-  // Calculate subtotal for each item
-  const getItemSubtotal = (price: any, quantity: any) => {
+  // Calcular el subtotal por cada item
+  const getItemSubtotal = (price: number, quantity: number) => {
     return price * quantity;
   };
 
-  // Calculate cart subtotal
+  // Calcular el subtotal del carrito
   const subtotal = cartItems.reduce((total, item) => {
     return total + getItemSubtotal(item.price, item.quantity);
   }, 0);
 
-  // Calculate taxes (10%)
+  // Calcular impuestos (10%)
   const taxes = subtotal * 0.1;
 
-  // Shipping cost
+  // Costo de envío
   const shipping = subtotal > 100 ? 0 : 9.99;
 
-  // Calculate discount (15% if promo applied)
-  const discount = promoApplied ? subtotal * 0.15 : 0;
+  // Calcular el total
+  const total = subtotal + taxes + shipping;
 
-  // Calculate total
-  const total = subtotal + taxes + shipping - discount;
-
-  // Update item quantity
-  const updateQuantity = (id: any, newQuantity: any) => {
+  // Actualizar la cantidad de un item
+  const updateQuantity = (id: number, newQuantity: number) => {
     if (newQuantity < 1) return;
 
     setCartItems(
@@ -83,16 +83,9 @@ export default function ShoppingCart() {
     );
   };
 
-  // Remove item from cart
-  const removeItem = (id: any) => {
+  // Eliminar un item del carrito
+  const removeItem = (id: number) => {
     setCartItems(cartItems.filter((item) => item.id !== id));
-  };
-
-  // Apply promo code
-  const applyPromoCode = () => {
-    if (promoCode.toLowerCase() === "unifined15") {
-      setPromoApplied(true);
-    }
   };
 
   return (
@@ -218,14 +211,6 @@ export default function ShoppingCart() {
                       {shipping === 0 ? "Gratis" : `$${shipping.toFixed(2)}`}
                     </span>
                   </div>
-
-                  {promoApplied && (
-                    <div className="flex justify-between text-green-600">
-                      <span>Descuento (15%)</span>
-                      <span>-${discount.toFixed(2)}</span>
-                    </div>
-                  )}
-
                   <Separator className="my-3" />
 
                   <div className="flex justify-between font-semibold text-lg">
