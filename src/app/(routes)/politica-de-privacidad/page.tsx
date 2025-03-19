@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function PrivacyPolicy() {
   return (
     <div className="container max-w-4xl py-12 mx-auto">
