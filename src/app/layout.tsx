@@ -3,7 +3,12 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Raleway } from "next/font/google";
 
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Agregá los pesos que necesites
+});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${raleway.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="px-4 md:px-6 lg:px-8">
           <Header />

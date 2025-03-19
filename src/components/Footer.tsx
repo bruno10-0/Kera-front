@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/privacidad"
+                  href="/politica-de-privacidad"
                   className="text-muted-foreground hover:text-foreground"
                 >
                   Política de Privacidad
@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2025 MINIMA. Todos los derechos reservados.</p>
+          <p>© 2025 UNIFINED. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
