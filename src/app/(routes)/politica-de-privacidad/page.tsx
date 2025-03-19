@@ -1,6 +1,6 @@
 export default function PrivacyPolicy() {
   return (
-    <div className="container max-w-4xl py-12 mx-auto">
+    <div className="container py-12 mx-auto">
       <header className="mb-12 text-center">
         <h1 className="text-4xl font-bold mb-2">Política de Privacidad</h1>
         <p className="text-xl text-muted-foreground">

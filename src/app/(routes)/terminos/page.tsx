@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator"
 
 export default function TermsAndConditions() {
   return (
-    <div className="container max-w-4xl py-12">
+    <div className="container py-12">
       <div className="space-y-2 text-center mb-10">
         <h1 className="text-3xl font-bold tracking-tight">Términos y Condiciones</h1>
         <p className="text-muted-foreground">Lee atentamente nuestras políticas y reglas de uso</p>

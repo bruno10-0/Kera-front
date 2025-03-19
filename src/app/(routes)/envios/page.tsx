@@ -22,7 +22,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function ShippingPage() {
   return (
-    <div className="container max-w-4xl py-12 px-4 md:px-6">
+    <div className="container py-12 px-4 md:px-6">
       <div className="space-y-4 text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
           Envíos

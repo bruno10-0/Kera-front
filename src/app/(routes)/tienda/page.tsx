@@ -256,9 +256,7 @@ const page = () => {
                 >
                   <div className="relative aspect-square overflow-hidden">
                     <Image
-                      src={`/placeholder.svg?height=400&width=400&text=Producto+${
-                        i + 1
-                      }`}
+                      src="https://www.remingtonlatam.com/co/wp-content/uploads/sites/27/2019/09/banner_slider_1600x610-copy.png"
                       alt={`Producto ${i + 1}`}
                       className="object-cover transition-transform group-hover:scale-105"
                       fill

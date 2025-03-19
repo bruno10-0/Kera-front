@@ -88,10 +88,13 @@ export default function ContactPage() {
           <div className="space-y-4">
             <h2 className="text-xl font-semibold">Ubicación</h2>
             <div className="aspect-video bg-muted rounded-md overflow-hidden">
-              {/* Replace with actual map component or iframe */}
-              <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                Mapa de ubicación
-              </div>
+              <iframe
+                className="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093745!2d144.96315791531866!3d-37.81410797975154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf4c19ed2abce760!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1613946156239!5m2!1sen!2sau"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ const Home = () => {
       <section className="relative">
         <div className="relative h-[70vh] w-full overflow-hidden">
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
+            src="https://www.remingtonlatam.com/co/wp-content/uploads/sites/27/2019/09/banner_slider_1600x610-copy.png"
             alt="Colección de moda"
             fill
             className="object-cover"
@@ -78,24 +78,24 @@ const products = [
     id: 1,
     name: "Camisa Minimalista",
     price: "29.990",
-    image: "/placeholder.svg?height=500&width=400",
+    image: "https://www.remingtonlatam.com/co/wp-content/uploads/sites/27/2019/09/banner_slider_1600x610-copy.png",
   },
   {
     id: 2,
     name: "Pantalón Recto",
     price: "39.990",
-    image: "/placeholder.svg?height=500&width=400",
+    image: "https://www.remingtonlatam.com/co/wp-content/uploads/sites/27/2019/09/banner_slider_1600x610-copy.png",
   },
   {
     id: 3,
     name: "Vestido Esencial",
     price: "49.990",
-    image: "/placeholder.svg?height=500&width=400",
+    image: "https://www.remingtonlatam.com/co/wp-content/uploads/sites/27/2019/09/banner_slider_1600x610-copy.png",
   },
   {
     id: 4,
     name: "Chaqueta Atemporal",
     price: "59.990",
-    image: "/placeholder.svg?height=500&width=400",
+    image: "https://www.remingtonlatam.com/co/wp-content/uploads/sites/27/2019/09/banner_slider_1600x610-copy.png",
   },
 ];
