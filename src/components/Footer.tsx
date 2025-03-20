@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2025 UNIFINED. Todos los derechos reservados.</p>
+          <p>© 2025 Queen's Closet. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

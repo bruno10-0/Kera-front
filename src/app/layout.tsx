@@ -20,8 +20,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kera",
-  description: "Una pagina web de comercio electrónico",
+  title: "Queen’s closet",
+  description:
+    "En Queen’s Closet, creamos ropa a medida para quienes buscan estilo, exclusividad y un ajuste perfecto. Diseñamos prendas personalizadas para eventos, fiestas, ropa casual y moda elegante, garantizando calidad y detalles únicos.",
 };
 
 export default function RootLayout({

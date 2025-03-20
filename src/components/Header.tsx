@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, ShoppingBag, User, X } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -20,7 +19,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
+import logo from "../../assets/logo.png";
 export default function Header() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,9 +57,10 @@ export default function Header() {
           <SheetContent side="left" className="w-[300px] sm:w-[400px]">
             <SheetHeader>
               <SheetTitle className="text-left font-serif text-2xl">
-                UNIFINED
+                Queen's Closet
               </SheetTitle>
             </SheetHeader>
+
             <nav className="mt-8 flex flex-col gap-4">
               <Link
                 href="/sobre-nosotros"
@@ -88,11 +88,13 @@ export default function Header() {
         </Sheet>
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <span className="font-serif text-xl font-medium md:text-2xl">
-            UNIFINED
-          </span>
-        </Link>
+        <Image
+          src={logo}
+          alt="Queen's Closet Logo"
+          width={100}
+          height={40}
+          className="mr-2 p-2 cursor-pointer"
+        />
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex md:gap-6 lg:gap-10">
