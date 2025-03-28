@@ -61,7 +61,7 @@ export default function Header() {
               </SheetTitle>
             </SheetHeader>
 
-            <nav className="mt-8 flex flex-col gap-4">
+            <nav className="mt-8 flex flex-col gap-4 px-6">
               <Link
                 href="/sobre-nosotros"
                 className="text-lg font-medium transition-colors hover:text-primary"
@@ -88,14 +88,9 @@ export default function Header() {
         </Sheet>
 
         {/* Logo */}
-        <Image
-          src={logo}
-          alt="Queen's Closet Logo"
-          width={100}
-          height={40}
-          className="mr-2 p-2 cursor-pointer"
-        />
-
+        <Link href="/">
+          <h1 className="text-left font-serif text-2xl">Queen's Closet</h1>
+        </Link>
         {/* Desktop Navigation */}
         <nav className="hidden md:flex md:gap-6 lg:gap-10">
           <Link

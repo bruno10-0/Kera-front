@@ -47,7 +47,7 @@ const page = () => {
                   Refina tu búsqueda con nuestros filtros
                 </SheetDescription>
               </SheetHeader>
-              <div className="grid gap-6 py-4">
+              <div className="grid gap-6 py-4 px-6">
                 <div>
                   <h3 className="font-medium mb-4">Categorías</h3>
                   <div className="grid gap-3">
